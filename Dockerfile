@@ -8,8 +8,9 @@ USER 0
 
 RUN \
   rpm -Uvh https://yum.puppet.com/puppet-tools-release-el-9.noarch.rpm; \
-  dnf module enable ruby:3.3; \
-  dnf install -y pdk make gcc ruby ruby-devel; \
+  dnf install -y pdk make gcc; \
   dnf clean all -y --enablerepo='*'
+
+RUN pdk env > /etc/profile.d/pkd.sh
 
 USER 10001
