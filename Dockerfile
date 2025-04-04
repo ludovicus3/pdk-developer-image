@@ -1,4 +1,4 @@
-FROM quay.io/devfile/universal-developer-image:ubi9-latest
+FROM quay.io/devfile/base-developer-image:ubi9-latest
 LABEL maintainer="Jason Galens"
 
 LABEL name="devfile/pdk-developer-image"
